@@ -61,12 +61,16 @@ console.log("Problem 3: What is the largest prime factor of the number 600851475
 //The prime factors of 13195 are 5, 7, 13 and 29.
 
 function findPrime(n){
-
+	// set number for division
 	let i = 2;
 
+	// look at all numbers smaller than the actual number you're looking at. Run the loop until you get to the highest divisible number. 
 	while (i <= n){
+		// is our original number divisible by i? 
 		if (n % i == 0){
+			// quotient of n / i.
 			n /= i;
+		// if the number is not divisible by 2, add one and keep checking. 
 		} else {
 			i++;
 		}
@@ -76,33 +80,6 @@ function findPrime(n){
 }
 
 findPrime(600851475143);
-
-
-// let primeCheck = 13195;
-// let aa = 13195;
-// let bb = 2;
-// let cc; 
-
-// for (let i = 2; i < primeCheck; i++){
-// 	if (primeCheck % i == 0){
-// 		console.log("Prime found: " + i);
-// 	}
-// }
-
-// function largestPrimeFactor(n){
-// var i=2;
-// while (i<=n){
-//     if (n%i == 0){
-//         n/=i;    
-//     }else{
-//         i++;
-//     }
-// }
-// console.log(i);
-// }
-
-// var aa = 13195;
-// largestPrimeFactor(aa);
 
 
 

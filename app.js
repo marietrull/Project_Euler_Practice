@@ -81,7 +81,42 @@ function findPrime(n){
 
 findPrime(600851475143);
 
+console.log('-----------------------------------------')
 
+
+// PROBLEM FOUR
+
+console.log("Problem 4: Find the largest palindrome made from the product of two 3-digit numbers.")
+
+function findPalindrome (){
+
+	let palindromes = [];
+
+	// loop through all three digit numbers
+	for (let i = 999; i > 100; i--){
+
+		// loop through all three digit numbers
+		for (let j = 999; j > 100; j--){
+
+			// find the product of all three digit calculations
+			let product = i*j;
+
+			// convert number to string, and then reverse that string
+			// If the reversed is equal to the original, then it is a palindrome
+			if (product.toString().split('').reverse().join('') == product){
+				// push the palindrome into the palindromes array
+				palindromes.push(product)
+			}
+		}
+
+	}
+	// find and print the largest number in the palindromes array
+	console.log("Problem 4: " + Math.max(...palindromes))
+
+}
+
+findPalindrome()
+console.log('-----------------------------------------')
 
 
 
